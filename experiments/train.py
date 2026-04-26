@@ -88,7 +88,7 @@ def train_vae(
     model     = VAE(latent_dim=latent_dim, dropout=dropout).to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
     scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, patience=5, factor=0.5, verbose=verbose
+        optimizer, patience=5, factor=0.5
     )
 
     os.makedirs(os.path.dirname(save_path), exist_ok=True)

@@ -55,7 +55,6 @@ def compute_auroc_matrix(scores, c_types, flags):
     for metric in METRIC_NAMES:
         score_arr   = scores[metric]
         results[metric] = {}
-        roc_data[metric] = {}
 
         for c_type in CORRUPTION_TYPES:
             # Binary label: 1 if this specific corruption type, 0 if clean
